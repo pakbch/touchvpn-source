@@ -1,0 +1,256 @@
+<UserControl
+	x:Class="TouchVPN.Screen.SubscriptionScreen" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:TouchVPN.Control" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:screen="clr-namespace:TouchVPN.Screen">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/GlobalColorTransparentChecked.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+	<Grid>
+		<controls:ErrorDialog
+			Title="{x:Static p:Resources.SubscriptionErrorTitle}"
+			Padding="0,0,200,0"
+			IsCancelButtonVisible="False"
+			OkButtonText="{x:Static p:Resources.Ok}"
+			ContinueCommand="{Binding ContinueCommand}"
+			Description="{Binding ErrorDialogDescription}"
+			Visibility="{Binding ErrorDialogVisible, Converter={StaticResource BooleanToCollapsedConverter}}" />
+		<Grid
+			Margin="40,72,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Grid.Row="0"
+				Style="{StaticResource SemiBoldBlackModeText18Px}"
+				Text="{x:Static p:Resources.SubscriptionScreen_Title}" />
+			<ScrollViewer
+				Grid.Row="1"
+				Margin="0,24,0,0"
+				CanContentScroll="False"
+				VerticalScrollBarVisibility="Visible">
+				<StackPanel
+					Margin="0,0,25,24"
+					Orientation="Vertical">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="350" />
+							<ColumnDefinition />
+							<ColumnDefinition />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="40" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+							<RowDefinition
+								Height="34" />
+						</Grid.RowDefinitions>
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="0"
+							Style="{StaticResource SemiBoldBlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Features}" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource SemiBoldBlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Basic}" />
+						<TextBlock
+							Grid.Row="0"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource SemiBoldGlobalAppColorModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Premium}" />
+						<TextBlock
+							Grid.Row="1"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Encryption}" />
+						<Image
+							Grid.Row="1"
+							Grid.Column="1"
+							Width="22"
+							Height="22"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Source="{StaticResource TransparentChecked}" />
+						<Image
+							Grid.Row="1"
+							Grid.Column="2"
+							Width="22"
+							Height="22"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Source="{StaticResource GlobalColorTransparentChecked}" />
+						<TextBlock
+							Grid.Row="2"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Advertisement}" />
+						<Image
+							Grid.Row="2"
+							Grid.Column="1"
+							Width="22"
+							Height="22"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Source="{StaticResource TransparentChecked}" />
+						<TextBlock
+							Grid.Row="2"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="—" />
+						<TextBlock
+							Grid.Row="3"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_VirtualLocations}" />
+						<TextBlock
+							Grid.Row="3"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="1" />
+						<TextBlock
+							Grid.Row="3"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="30+" />
+						<TextBlock
+							Grid.Row="4"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_LinkedDevices}" />
+						<TextBlock
+							Grid.Row="4"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="1" />
+						<TextBlock
+							Grid.Row="4"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="5" />
+						<TextBlock
+							Grid.Row="5"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_ConnectionSpeed}" />
+						<TextBlock
+							Grid.Row="5"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="1x" />
+						<TextBlock
+							Grid.Row="5"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="4x" />
+						<TextBlock
+							Grid.Row="6"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Streaming}" />
+						<TextBlock
+							Grid.Row="6"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_HD}" />
+						<TextBlock
+							Grid.Row="6"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_HD}" />
+						<TextBlock
+							Grid.Row="7"
+							Grid.Column="0"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_TechSupport}" />
+						<TextBlock
+							Grid.Row="7"
+							Grid.Column="1"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource BlackModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Faq}" />
+						<TextBlock
+							Grid.Row="7"
+							Grid.Column="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GlobalAppColorModeText16Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_RoundTheClock}" />
+					</Grid>
+					<Button
+						Width="520"
+						Height="48"
+						Margin="0,32,0,0"
+						Content="{x:Static p:Resources.SubscriptionScreen_SelectPlan}"
+						Style="{StaticResource GlobalAppColorButton}"
+						Command="{Binding PurchaseCommand}" />
+					<TextBlock
+						Margin="0,16,0,0"
+						VerticalAlignment="Center"
+						Style="{StaticResource RedMediumLightShadeModeText14Px}"
+						Text="{x:Static p:Resources.SubscriptionScreen_SaleDescription}" />
+					<TextBlock
+						Margin="0,24,0,0"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Style="{StaticResource GrayDarkShadeModeText14Px}"
+						Text="{x:Static p:Resources.SubscriptionScreen_Agreement1}"
+						TextWrapping="Wrap">
+						<controls:HyperLink
+							LinkText="{x:Static p:Resources.TermsOfService}"
+							TextDecorations=""
+							NavigateAddress="{Binding Source={x:Static p:Resources.TermsUrl}}" /> <TextBlock
+							Text="{x:Static p:Resources.SignInScreen_And}" /> <controls:HyperLink
+							LinkText="{x:Static p:Resources.PrivacyPolicy}"
+							TextDecorations=""
+							NavigateAddress="{Binding Source={x:Static p:Resources.PrivacyPolicyUrl}}" /> <TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource GrayDarkShadeModeText14Px}"
+							Text="{x:Static p:Resources.SubscriptionScreen_Agreement2}"
+							TextWrapping="Wrap" /></TextBlock>
+				</StackPanel>
+			</ScrollViewer>
+		</Grid>
+	</Grid>
+</UserControl>

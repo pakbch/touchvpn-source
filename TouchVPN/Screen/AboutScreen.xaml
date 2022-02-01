@@ -1,0 +1,29 @@
+<UserControl
+	x:Class="TouchVPN.Screen.AboutScreen" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:control="clr-namespace:TouchVPN.Control" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties"
+	Background="{StaticResource White}" xmlns:screen="clr-namespace:TouchVPN.Screen">
+	<Grid>
+		<StackPanel
+			Margin="40,72,300,0"
+			Orientation="Vertical">
+			<TextBlock
+				Style="{StaticResource SemiBoldBlackModeText18Px}"
+				Text="{x:Static p:Resources.AboutScreen_Title}" />
+			<TextBlock
+				Margin="0,4,0,0"
+				Style="{StaticResource BlackModeText16Px}"
+				Text="{Binding AppVersion}" />
+			<control:HyperLink
+				Margin="0,24,0,0"
+				FontSize="16"
+				LinkText="{x:Static p:Resources.TermsOfService}"
+				TextDecorations=""
+				NavigateAddress="{Binding Source={x:Static p:Resources.TermsUrl}}" />
+			<control:HyperLink
+				Margin="0,8,0,0"
+				FontSize="16"
+				LinkText="{x:Static p:Resources.PrivacyPolicy}"
+				TextDecorations=""
+				NavigateAddress="{Binding Source={x:Static p:Resources.PrivacyPolicyUrl}}" />
+		</StackPanel>
+	</Grid>
+</UserControl>

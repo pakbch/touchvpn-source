@@ -1,0 +1,175 @@
+<UserControl
+	x:Class="TouchVPN.Screen.DebugScreen" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:control="clr-namespace:TouchVPN.Control" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:screen="clr-namespace:TouchVPN.Screen">
+	<Grid
+		Margin="40,72,0,0">
+		<Grid.RowDefinitions>
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition
+				Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<TextBlock
+			Grid.Row="0"
+			Style="{StaticResource SemiBoldBlackModeText18Px}"
+			Text="{x:Static p:Resources.DebugScreen_Title}" />
+		<Grid
+			Row="1"
+			Margin="0,30,0,0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+				<RowDefinition
+					Height="Auto" />
+			</Grid.RowDefinitions>
+			<TextBlock
+				Grid.Row="0"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_AppVersion}" />
+			<TextBlock
+				Grid.Row="1"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_Build}" />
+			<TextBlock
+				Grid.Row="2"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_Token}" />
+			<TextBlock
+				Grid.Row="3"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_DeviceId}" />
+			<TextBlock
+				Grid.Row="4"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_OsVersion}" />
+			<TextBlock
+				Grid.Row="5"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_NetFrameworkVersion}" />
+			<TextBlock
+				Grid.Row="6"
+				Grid.Column="0"
+				Margin="0,10,0,0"
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.DebugScreen_EdgeRuntimeVersion}" />
+			<TextBox
+				Grid.Row="0"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding AppVersion}" />
+			<TextBox
+				Grid.Row="1"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding Build}" />
+			<TextBox
+				Grid.Row="2"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding Token}" />
+			<TextBox
+				Grid.Row="3"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding DeviceId}" />
+			<TextBox
+				Grid.Row="4"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding OsVersion}" />
+			<TextBox
+				Grid.Row="5"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding NetFrameworkVersion}" />
+			<TextBox
+				Grid.Row="6"
+				Grid.Column="1"
+				Margin="20,10,0,0"
+				BorderThickness="0"
+				FontSize="10"
+				IsReadOnly="True"
+				Style="{StaticResource GothamProFontFamilyTextBox}"
+				TextWrapping="Wrap"
+				Text="{Binding EdgeRuntimeVersion}" />
+		</Grid>
+		<Grid
+			Row="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition />
+			</Grid.ColumnDefinitions>
+			<Button
+				Grid.Column="0"
+				Width="100"
+				Height="20"
+				Content="{x:Static p:Resources.DebugScreen_Crash}"
+				Style="{StaticResource GlobalAppColorButton}"
+				Command="{Binding CrashCommand}" />
+			<Button
+				Grid.Column="1"
+				Width="100"
+				Height="20"
+				Content="{x:Static p:Resources.DebugScreen_Close}"
+				Style="{StaticResource GlobalAppColorButton}"
+				Command="{Binding CloseCommand}" />
+		</Grid>
+	</Grid>
+</UserControl>

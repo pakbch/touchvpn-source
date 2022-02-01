@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:screen="clr-namespace:TouchVPN">
+	<DrawingImage
+		x:Key="ArrowDown">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,9 L16,9 L16,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="0"
+						Y="3.7252902984619141E-09" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Geometry="M16,9 M0,0 M8.71881,8.712 L15.7128,1.704 C16.0961,1.296 16.0961,0.672 15.7128,0.288 C15.3296,-0.096 14.7068,-0.096 14.2996,0.288 L8.00024,6.6 L1.70084,0.288 C1.31761,-0.096 0.670902,-0.096 0.287668,0.288 C-0.0955658,0.672 -0.0955658,1.296 0.287668,1.704 L7.30563,8.712 C7.68887,9.096 8.31162,9.096 8.71881,8.712"
+					Brush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

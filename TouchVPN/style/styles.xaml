@@ -1,0 +1,1165 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:control="clr-namespace:TouchVPN.Control" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:screen="clr-namespace:TouchVPN" xmlns:watermark="clr-namespace:Mystique.UI.Watermark;assembly=Mystique.UI.Watermark">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="pack://application:,,,/Mystique.UI.Watermark;component/Style.xaml" />
+		<ResourceDictionary
+			Source="pack://application:,,,/Asset/Vector/ArrowUp.xaml" />
+		<ResourceDictionary
+			Source="pack://application:,,,/Asset/Vector/ArrowDown.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<Style
+		TargetType="{x:Type TextBlock}"
+		x:Key="GothamProFontFamily">
+		<Setter
+			Property="FontFamily"
+			Value="{StaticResource GothamPro}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GlobalAppColorModeText">
+		<Setter
+			Property="Foreground"
+			Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GlobalAppColorModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GlobalAppColorModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GlobalAppColorModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGlobalAppColorModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGlobalAppColorModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGlobalAppColorModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGlobalAppColorModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGlobalAppColorModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="WhiteModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource White}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource WhiteModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldWhiteModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Black}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GreenCyanMediumDarkShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource GreenCyanMediumDarkShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GreenCyanMediumDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGreenCyanMediumDarkShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGreenCyanMediumDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGreenCyanMediumDarkShadeModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldBlackModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText16Px}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="LightBlackModeText16Px">
+		<Setter
+			Property="FontWeight"
+			Value="Light" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText24Px">
+		<Setter
+			Property="FontSize"
+			Value="24" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText32Px">
+		<Setter
+			Property="FontSize"
+			Value="32" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText20Px">
+		<Setter
+			Property="FontSize"
+			Value="20" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource BlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BlackModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldBlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldBlackModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldBlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldBlackModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldBlackModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldBlackModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GrayDarkShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GreenCyanShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource GreenCyanShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="CyanBlueMediumGrayShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumGrayShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource CyanBlueMediumGrayShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="ThinCyanBlueMediumGrayShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="Thin" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource CyanBlueMediumGrayShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="ThinCyanBlueMediumGrayShadeModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="RedMediumLightShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource RedMediumLightShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource RedMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="RedMediumLightShadeModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource RedMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldRedMediumLightShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="CyanBlueMediumLightShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource CyanBlueMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="CyanBlueMediumLightShadeModeText12Px">
+		<Setter
+			Property="FontSize"
+			Value="12" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource CyanBlueMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="CyanBlueMediumLightShadeModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="BoldGrayDarkShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="Bold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGrayDarkShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="GrayDarkShadeModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGrayDarkShadeModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGrayDarkShadeModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGrayDarkShadeModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GreenCyanShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGreenCyanShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldGreenCyanShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldGreenCyanShadeModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldRedMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldRedMediumLightShadeModeText14Px">
+		<Setter
+			Property="FontSize"
+			Value="14" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldRedMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldRedMediumLightShadeModeText16Px">
+		<Setter
+			Property="FontSize"
+			Value="16" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldRedMediumLightShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldRedMediumLightShadeModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GrayDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="UltraLightDarkModeText">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+		<Setter
+			Property="FontWeight"
+			Value="UltraLight" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="TrafficDescriptionModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource GrayMediumLightShade}" />
+		<Setter
+			Property="FontSize"
+			Value="17" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource GothamProFontFamily}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="CyanBlueDarkShadeModeText">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueDarkShade}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource CyanBlueDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldCyanBlueDarkShadeModeText">
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource SemiBoldCyanBlueDarkShadeModeText}"
+		TargetType="{x:Type TextBlock}"
+		x:Key="SemiBoldCyanBlueDarkShadeModeText18Px">
+		<Setter
+			Property="FontSize"
+			Value="18" />
+	</Style>
+	<Style
+		TargetType="{x:Type Run}"
+		x:Key="GlobalAppColorRunMode">
+		<Setter
+			Property="FontFamily"
+			Value="{StaticResource GothamPro}" />
+		<Setter
+			Property="Foreground"
+			Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+		<Setter
+			Property="FontWeight"
+			Value="SemiBold" />
+	</Style>
+	<Style
+		TargetType="{x:Type TextBox}"
+		x:Key="GothamProFontFamilyTextBox">
+		<Setter
+			Property="FontFamily"
+			Value="{StaticResource GothamPro}" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource {x:Type ToggleButton}}"
+		TargetType="{x:Type RadioButton}"
+		x:Key="MainMenuButton">
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type RadioButton}">
+					<Grid
+						Name="MenuButtonStackPanel"
+						Width="210"
+						Height="48"
+						VerticalAlignment="Center">
+						<Border
+							Name="MenuButtonBorder">
+							<StackPanel
+								Margin="28,0,0,0"
+								VerticalAlignment="Center"
+								Orientation="Horizontal">
+								<Image
+									Width="{Binding ImageWidth, RelativeSource={RelativeSource AncestorType=RadioButton}}"
+									Height="{Binding ImageHeight, RelativeSource={RelativeSource AncestorType=RadioButton}}"
+									Source="{Binding ImageSource, RelativeSource={RelativeSource AncestorType=RadioButton}}" />
+								<TextBlock
+									Name="MenuButtonTextBlock"
+									Margin="11,0,0,0"
+									Background="#00FFFFFF"
+									Style="{StaticResource SemiBoldGrayDarkShadeModeText16Px}"
+									Text="{Binding Text, RelativeSource={RelativeSource AncestorType=RadioButton}}" />
+							</StackPanel>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								TargetName="MenuButtonTextBlock"
+								Property="Foreground"
+								Value="{Binding CheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+							<Setter
+								TargetName="MenuButtonStackPanel"
+								Property="Background"
+								Value="{StaticResource White}" />
+							<Setter
+								TargetName="MenuButtonBorder"
+								Property="BorderThickness"
+								Value="2,0,0,0" />
+							<Setter
+								TargetName="MenuButtonBorder"
+								Property="BorderBrush"
+								Value="{Binding CheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+						</Trigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="False">
+							<Setter
+								TargetName="MenuButtonTextBlock"
+								Property="Foreground"
+								Value="{Binding UnCheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+							<Setter
+								TargetName="MenuButtonStackPanel"
+								Property="Background"
+								Value="#00FFFFFF" />
+							<Setter
+								TargetName="MenuButtonBorder"
+								Property="BorderBrush"
+								Value="{Binding UnCheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="MenuButtonTextBlock"
+								Property="Foreground"
+								Value="{Binding CheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+							<Setter
+								TargetName="MenuButtonBorder"
+								Property="BorderThickness"
+								Value="2,0,0,0" />
+							<Setter
+								TargetName="MenuButtonBorder"
+								Property="BorderBrush"
+								Value="{Binding CheckedContentBrush, RelativeSource={RelativeSource AncestorType=control:MenuButton}}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource {x:Type Button}}"
+		TargetType="{x:Type Button}"
+		x:Key="LinkButton">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<TextBlock
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Background="#00FFFFFF"
+						Style="{StaticResource SemiBoldGlobalAppColorModeText}"
+						FontSize="{Binding FontSize, RelativeSource={RelativeSource AncestorType=Button}}"
+						Text="{Binding Content, RelativeSource={RelativeSource AncestorType=Button}}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="SignInWithImageButton">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Image
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+						Width="{Binding SignInWithButtonImageWidth, RelativeSource={RelativeSource AncestorType=Button}}"
+						Height="{Binding SignInWithButtonImageHeight, RelativeSource={RelativeSource AncestorType=Button}}"
+						Source="{Binding SignInWithButtonImageSource, RelativeSource={RelativeSource AncestorType=Button}}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Image}"
+		x:Key="BitmapImage">
+		<Setter
+			Property="Width"
+			Value="20" />
+		<Setter
+			Property="Height"
+			Value="20" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="RenderOptions.BitmapScalingMode"
+			Value="Fant" />
+		<Setter
+			Property="Stretch"
+			Value="Fill" />
+	</Style>
+	<Style
+		TargetType="{x:Type TextBox}"
+		x:Key="UnderlineTextBox">
+		<Setter
+			Property="Width"
+			Value="522" />
+		<Setter
+			Property="Height"
+			Value="40" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="FontFamily"
+			Value="{StaticResource GothamPro}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0,0,0,1" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+	</Style>
+	<Style
+		TargetType="{x:Type ListBox}"
+		x:Key="VirtualLocationList">
+		<Setter
+			Property="ItemContainerStyle">
+			<Setter.Value>
+				<Style
+					BasedOn="{StaticResource {x:Type ListBoxItem}}"
+					TargetType="{x:Type ListBoxItem}">
+					<Setter
+						Property="Focusable"
+						Value="{Binding Selectable}" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ListBoxItem}">
+								<StackPanel
+									Background="#00FFFFFF">
+									<Grid
+										Margin="16,0,0,17">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition
+												Width="20" />
+											<ColumnDefinition
+												Width="465" />
+											<ColumnDefinition
+												Width="50" />
+										</Grid.ColumnDefinitions>
+										<Image
+											Grid.Column="0"
+											Style="{StaticResource BitmapImage}"
+											Source="{Binding VirtualLocationImagePath}" />
+										<TextBlock
+											Name="ListBoxItemText"
+											Grid.Column="1"
+											Margin="16,0,0,0"
+											HorizontalAlignment="Left"
+											VerticalAlignment="Center"
+											Background="#00FFFFFF"
+											Style="{StaticResource GrayDarkShadeModeText14Px}"
+											Text="{Binding DisplayName}" />
+										<Image
+											Name="CheckImage"
+											Grid.Column="2"
+											Width="22"
+											Height="22"
+											Margin="0,0,10,0"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center" />
+									</Grid>
+								</StackPanel>
+								<ControlTemplate.Triggers>
+									<Trigger
+										Property="UIElement.IsMouseOver"
+										Value="True">
+										<Setter
+											TargetName="ListBoxItemText"
+											Property="Foreground"
+											Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+									</Trigger>
+									<Trigger
+										Property="ListBoxItem.IsSelected"
+										Value="True">
+										<Setter
+											TargetName="CheckImage"
+											Value="{DynamicResource Checked}"
+											Property="Source" />
+									</Trigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="ListBoxItem.IsSelected"
+												Value="False" />
+											<Condition
+												Property="Focusable"
+												Value="False" />
+										</MultiTrigger.Conditions>
+										<MultiTrigger.Setters>
+											<Setter
+												TargetName="CheckImage"
+												Value="{DynamicResource Locked}"
+												Property="Source" />
+										</MultiTrigger.Setters>
+									</MultiTrigger>
+									<MultiTrigger>
+										<MultiTrigger.Conditions>
+											<Condition
+												Property="ListBoxItem.IsSelected"
+												Value="False" />
+											<Condition
+												Property="Focusable"
+												Value="True" />
+										</MultiTrigger.Conditions>
+										<MultiTrigger.Setters>
+											<Setter
+												TargetName="CheckImage"
+												Value="{DynamicResource Unchecked}"
+												Property="Source" />
+										</MultiTrigger.Setters>
+									</MultiTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="GlobalAppColorButton">
+		<Setter
+			Property="Background"
+			Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Border
+						BorderThickness="1"
+						CornerRadius="10"
+						Background="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+						BorderBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}">
+						<TextBlock
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Style="{StaticResource SemiBoldWhiteModeText}"
+							Text="{Binding Content, RelativeSource={RelativeSource AncestorType=Button}}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource GlobalAppColorButton}"
+		TargetType="{x:Type Button}"
+		x:Key="GlobalAppColorTransparentButton">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource {x:Type Button}}"
+		TargetType="{x:Type Button}"
+		x:Key="VirtualLocationButton">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Hand" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<StackPanel
+						Background="#00FFFFFF"
+						Orientation="Horizontal">
+						<Image
+							Style="{StaticResource BitmapImage}"
+							Source="{Binding VirtualLocationImageSource, RelativeSource={RelativeSource AncestorType=Button}}" />
+						<TextBlock
+							Margin="10,0,0,0"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Background="#00FFFFFF"
+							Style="{StaticResource SemiBoldGlobalAppColorModeText14Px}"
+							Text="{Binding VirtualLocationName, RelativeSource={RelativeSource AncestorType=Button}}" />
+						<Image
+							Width="16"
+							Height="9"
+							Margin="15,0,0,0"
+							HorizontalAlignment="Left"
+							Source="{Binding ArrowImageSource, RelativeSource={RelativeSource AncestorType=Button}}" />
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ToggleButton}"
+		x:Key="ExpanderToggleButton">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<StackPanel
+						Orientation="Horizontal"
+						Background="{StaticResource GrayVeryLightShade}">
+						<TextBlock
+							MinWidth="410"
+							MaxWidth="410"
+							Margin="16,12,48,12"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							TextWrapping="Wrap"
+							Style="{StaticResource SemiBoldBlackModeText16Px}"
+							Text="{Binding Header, RelativeSource={RelativeSource AncestorType=Expander}}" />
+						<Image
+							Name="ExpanderButtonArrow"
+							Margin="0,0,16,0"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Source="{DynamicResource ArrowUp}" />
+					</StackPanel>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="False">
+							<Setter
+								TargetName="ExpanderButtonArrow"
+								Property="Source"
+								Value="{StaticResource ArrowDown}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Expander}"
+		x:Key="ExpanderButton">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Expander}">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="Auto" />
+							<RowDefinition
+								Name="ContentRow"
+								Height="0" />
+						</Grid.RowDefinitions>
+						<ToggleButton
+							Grid.Row="0"
+							BorderThickness="0"
+							Cursor="Hand"
+							Style="{StaticResource ExpanderToggleButton}"
+							IsChecked="{Binding IsExpanded, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+						<ContentPresenter
+							Name="Content"
+							Grid.Row="1"
+							Margin="4" />
+						<VisualStateManager.VisualStateGroups>
+							<VisualStateGroup
+								x:Name="CommonStates">
+								<VisualState
+									x:Name="Normal" />
+								<VisualState
+									x:Name="MouseOver" />
+							</VisualStateGroup>
+						</VisualStateManager.VisualStateGroups>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="Expander.IsExpanded"
+							Value="True">
+							<Setter
+								TargetName="ContentRow"
+								Property="Height"
+								Value="{Binding Height, ElementName=Content}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource TextBoxWithHint}"
+		TargetType="{x:Type TextBox}"
+		x:Key="SignInTextBox">
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Width"
+			Value="522" />
+		<Setter
+			Property="Height"
+			Value="48" />
+		<Setter
+			Property="BorderBrush"
+			Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0,0,0,1" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+		<Setter
+			Property="FrameworkElement.Tag"
+			Value="0" />
+		<Setter
+			Property="FontSize"
+			Value="16" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Style.Triggers>
+			<Trigger
+				Property="watermark:WatermarkHint.HasText"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource GrayDarkShade}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		BasedOn="{StaticResource TextBoxWithHint}"
+		TargetType="{x:Type TextBox}"
+		x:Key="SupportQuestionTextBox">
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Width"
+			Value="522" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource GrayDarkShade}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0,0,0,1" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+		<Setter
+			Property="FrameworkElement.Tag"
+			Value="0" />
+		<Setter
+			Property="FontSize"
+			Value="14" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Style.Triggers>
+			<Trigger
+				Property="watermark:WatermarkHint.HasText"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource GrayDarkShade}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		BasedOn="{StaticResource PasswordBoxWithHint}"
+		TargetType="{x:Type PasswordBox}"
+		x:Key="SignInPasswordBox">
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="BorderBrush"
+			Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0,0,0,1" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource CyanBlueMediumLightShade}" />
+		<Setter
+			Property="FrameworkElement.Tag"
+			Value="0" />
+		<Setter
+			Property="Width"
+			Value="522" />
+		<Setter
+			Property="Height"
+			Value="48" />
+		<Setter
+			Property="FontSize"
+			Value="16" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Style.Triggers>
+			<Trigger
+				Property="watermark:WatermarkHint.HasText"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource GrayDarkShade}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		x:Key="CheckBoxFocusVisual">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border>
+						<Rectangle
+							Margin="15,0,0,0"
+							Stroke="#60000000"
+							StrokeDashArray="1 2"
+							StrokeThickness="1" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type CheckBox}"
+		x:Key="SwitchBox">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{StaticResource CheckBoxFocusVisual}" />
+		<Setter
+			Property="FontFamily"
+			Value="{StaticResource GothamPro}" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Height"
+			Value="20" />
+		<Setter
+			Property="Width"
+			Value="Auto" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type CheckBox}">
+					<BulletDecorator
+						Background="#00FFFFFF">
+						<ContentPresenter
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							RecognizesAccessKey="True" />
+						<BulletDecorator.Bullet>
+							<DockPanel>
+								<Border
+									Name="Border"
+									Width="44"
+									Height="20"
+									Padding="2,1,2,1"
+									Background="#00FFFFFF"
+									BorderThickness="1"
+									CornerRadius="10"
+									DockPanel.Dock="Left"
+									BorderBrush="{StaticResource GrayDarkShade}">
+									<Ellipse
+										Name="CheckMark"
+										Width="10"
+										Height="10"
+										HorizontalAlignment="Left"
+										VerticalAlignment="Center"
+										Fill="{StaticResource GrayDarkShade}" />
+								</Border>
+								<TextBlock
+									Name="Label"
+									Width="Auto"
+									Height="Auto"
+									Margin="8,0,0,0"
+									VerticalAlignment="Bottom"
+									DockPanel.Dock="Left"
+									Text="{x:Static p:Resources.SettingsScreen_On}"
+									Style="{StaticResource BlackModeText16Px}" />
+							</DockPanel>
+						</BulletDecorator.Bullet>
+					</BulletDecorator>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								TargetName="Label"
+								Value="{x:Static p:Resources.SettingsScreen_On}"
+								Property="Text" />
+							<Setter
+								TargetName="Border"
+								Property="Background"
+								Value="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+							<Setter
+								TargetName="Border"
+								Property="BorderThickness"
+								Value="0" />
+							<Setter
+								TargetName="CheckMark"
+								Property="Fill"
+								Value="{StaticResource White}" />
+							<Setter
+								TargetName="CheckMark"
+								Property="Stroke"
+								Value="{StaticResource White}" />
+							<TriggerBase.EnterActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ThicknessAnimation
+											Storyboard.TargetName="CheckMark"
+											Storyboard.TargetProperty="Margin"
+											To="26,0,0,0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.EnterActions>
+							<TriggerBase.ExitActions>
+								<BeginStoryboard>
+									<Storyboard>
+										<ThicknessAnimation
+											Storyboard.TargetName="CheckMark"
+											Storyboard.TargetProperty="Margin"
+											To="0,0,0,0"
+											Duration="0:0:0.2" />
+									</Storyboard>
+								</BeginStoryboard>
+							</TriggerBase.ExitActions>
+						</Trigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="False">
+							<Setter
+								TargetName="Label"
+								Value="{x:Static p:Resources.SettingsScreen_Off}"
+								Property="Text" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								Property="FrameworkElement.Cursor"
+								Value="Hand" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

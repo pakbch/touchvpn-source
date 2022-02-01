@@ -1,0 +1,78 @@
+<UserControl
+	x:Class="TouchVPN.Control.MainMenu" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:menuButton="clr-namespace:TouchVPN.Control" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:screen="clr-namespace:TouchVPN"
+	Background="{StaticResource GrayVeryLightShade}">
+	<Grid>
+		<StackPanel
+			Name="MenuButtonsPanel"
+			Margin="0,80,0,0"
+			Orientation="Vertical">
+			<menuButton:MenuButton
+				Name="HomeScreenButton"
+				ImageBrush="{StaticResource RedMediumLightShade}"
+				ImageHeight="19"
+				ImageSource="{StaticResource Pin}"
+				ImageWidth="14"
+				IsChecked="True"
+				Text="{x:Static p:Resources.MainMenuScreen_Home}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToHomeScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+			<menuButton:MenuButton
+				Name="AccountScreenButton"
+				ImageBrush="{StaticResource GrayDarkShade}"
+				ImageHeight="16"
+				ImageSource="{StaticResource Account}"
+				ImageWidth="16"
+				IsChecked="False"
+				Text="{x:Static p:Resources.MainMenuScreen_Account}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToAccountScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+			<menuButton:MenuButton
+				Name="AboutScreenButton"
+				ImageBrush="{StaticResource GrayDarkShade}"
+				ImageHeight="16"
+				ImageSource="{StaticResource About}"
+				ImageWidth="16"
+				IsChecked="False"
+				Text="{x:Static p:Resources.MainMenuScreen_About}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToAboutScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+			<menuButton:MenuButton
+				Name="SubscriptionScreenButton"
+				ImageBrush="{StaticResource GrayDarkShade}"
+				ImageHeight="16"
+				ImageSource="{StaticResource Subscription}"
+				ImageWidth="16"
+				IsChecked="False"
+				Text="{x:Static p:Resources.MainMenuScreen_Subscription}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToSubscriptionScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+				Visibility="{Binding DataContext.IsUnlimited, Converter={StaticResource InvertBooleanToCollapsedConverter}, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+			<menuButton:MenuButton
+				Name="SettingsScreenButton"
+				ImageBrush="{StaticResource GrayDarkShade}"
+				ImageHeight="18"
+				ImageSource="{StaticResource Settings}"
+				ImageWidth="18"
+				IsChecked="False"
+				Text="{x:Static p:Resources.MainMenuScreen_Settings}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToSettingsScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+			<menuButton:MenuButton
+				Name="SupportScreenButton"
+				ImageBrush="{StaticResource GrayDarkShade}"
+				ImageHeight="16"
+				ImageSource="{StaticResource Support}"
+				ImageWidth="16"
+				IsChecked="False"
+				Text="{x:Static p:Resources.MainMenuScreen_Support}"
+				UnCheckedContentBrush="{StaticResource GrayDarkShade}"
+				CheckedContentBrush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}"
+				Command="{Binding DataContext.NavigateToSupportScreenCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+		</StackPanel>
+	</Grid>
+</UserControl>

@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="MailLogo">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,44 L44,44 L44,0 L0,0">
+				<GeometryDrawing
+					Brush="#FFFE573F">
+					<GeometryDrawing.Geometry>
+						<RectangleGeometry
+							RadiusX="6"
+							RadiusY="6"
+							Rect="0,0,44,44" />
+					</GeometryDrawing.Geometry>
+				</GeometryDrawing>
+				<GeometryDrawing
+					Brush="#FFFFFFFF"
+					Geometry="F1 M44,44 M0,0 M11.8,15 C11.5642,15 11.3404,15.0445 11.1344,15.1178 L21.3156,23.1022 C21.7557,23.4472 22.2245,23.4475 22.6656,23.1022 L32.8656,15.1178 C32.6596,15.0445 32.4358,15 32.2,15 L11.8,15 M10.0188,16.3882 C10.0074,16.4618 10,16.5389 10,16.6154 L10,27.3846 C10,28.2795 10.8028,29 11.8,29 L32.2,29 C33.1972,29 34,28.2795 34,27.3846 L34,16.6154 C34,16.5389 33.9926,16.4618 33.9813,16.3882 L23.8469,24.3221 C22.7895,25.1498 21.1917,25.1511 20.1344,24.3221 L10.0188,16.3882" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

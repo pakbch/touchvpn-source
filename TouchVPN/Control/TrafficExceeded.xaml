@@ -1,0 +1,49 @@
+<UserControl
+	x:Class="TouchVPN.Control.TrafficExceeded" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:control="clr-namespace:TouchVPN.Control">
+	<Grid>
+		<Image
+			Width="587"
+			HorizontalAlignment="Center"
+			VerticalAlignment="Center"
+			Source="{StaticResource Map}" />
+		<StackPanel
+			Margin="0,112,0,24"
+			Orientation="Vertical">
+			<StackPanel
+				Margin="136,0,136,0"
+				Orientation="Vertical">
+				<TextBlock
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Style="{StaticResource SemiBoldBlackModeText18Px}"
+					Text="{x:Static p:Resources.TrafficExceededScreen_Oops}" />
+				<TextBlock
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Style="{StaticResource SemiBoldBlackModeText18Px}"
+					Text="{x:Static p:Resources.TrafficExceededScreen_DailyLimitExceeded}" />
+			</StackPanel>
+			<Image
+				Width="205"
+				Height="182"
+				Margin="199,15,201,0"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Source="{StaticResource TrafficExceededLogo}" />
+			<TextBlock
+				Margin="125,34,142,0"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Style="{StaticResource BlackModeText16Px}"
+				Text="{x:Static p:Resources.TrafficExceededScreen_Description}"
+				TextWrapping="Wrap" />
+			<Button
+				Width="522"
+				Height="48"
+				Margin="40,36,40,0"
+				Content="{x:Static p:Resources.TrafficExceededScreen_UpgradeToPremium}"
+				Style="{StaticResource GlobalAppColorButton}"
+				Command="{Binding UpgradeToPremiumCommand}" />
+		</StackPanel>
+	</Grid>
+</UserControl>

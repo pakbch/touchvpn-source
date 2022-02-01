@@ -1,0 +1,83 @@
+<UserControl
+	x:Class="TouchVPN.Screen.PersonalDataAgreementScreen" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:TouchVPN.Control" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties"
+	Width="815"
+	Height="560"
+	Background="{StaticResource White}" xmlns:screen="clr-namespace:TouchVPN.Screen">
+	<DockPanel
+		Height="560">
+		<StackPanel
+			Margin="24,12,0,0"
+			DockPanel.Dock="Top"
+			ZIndex="10">
+			<TextBlock
+				Style="{StaticResource SemiBoldGrayDarkShadeModeText16Px}"
+				Text="{x:Static p:Resources.PersonalDataAgreementScreen_Title}" />
+		</StackPanel>
+		<ScrollViewer
+			Margin="40,42,0,40"
+			CanContentScroll="False"
+			VerticalScrollBarVisibility="Visible">
+			<StackPanel
+				Margin="0,0,61,0"
+				Orientation="Vertical">
+				<TextBlock
+					Style="{StaticResource SemiBoldCyanBlueDarkShadeModeText18Px}"
+					Text="{x:Static p:Resources.FAQ_ShareIpQuestion}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,16,0,0"
+					Style="{StaticResource ThinCyanBlueMediumGrayShadeModeText16Px}"
+					Text="{x:Static p:Resources.FAQ_ShareIpAnswer}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,32,0,0"
+					Style="{StaticResource SemiBoldCyanBlueDarkShadeModeText18Px}"
+					Text="{x:Static p:Resources.FAQ_AccountQuestion}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,16,0,0"
+					Style="{StaticResource ThinCyanBlueMediumGrayShadeModeText16Px}"
+					Text="{x:Static p:Resources.FAQ_AccountAnswer}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,32,0,0"
+					Style="{StaticResource SemiBoldCyanBlueDarkShadeModeText18Px}"
+					Text="{x:Static p:Resources.FAQ_CollectInformationQuestion}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,16,0,0"
+					Style="{StaticResource ThinCyanBlueMediumGrayShadeModeText16Px}"
+					Text="{x:Static p:Resources.FAQ_CollectInformationAnswer}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,32,0,0"
+					Style="{StaticResource SemiBoldCyanBlueDarkShadeModeText18Px}"
+					Text="{x:Static p:Resources.FAQ_AdvertisesQuestion}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,16,0,0"
+					Style="{StaticResource ThinCyanBlueMediumGrayShadeModeText16Px}"
+					Text="{x:Static p:Resources.FAQ_AdvertisesAnswer}"
+					TextWrapping="Wrap" />
+				<TextBlock
+					Margin="0,40,0,0"
+					Style="{StaticResource SemiBoldCyanBlueDarkShadeModeText18Px}"
+					Text="{x:Static p:Resources.PersonalDataAgreementScreen_MoreInformation}"
+					TextWrapping="Wrap">
+					<controls:HyperLink
+						FontSize="18"
+						LinkText="{x:Static p:Resources.PersonalDataAgreementScreen_MoreInformationLink}"
+						TextDecorations=""
+						NavigateAddress="{Binding Source={x:Static p:Resources.PrivacyPolicyUrl}}" />
+				</TextBlock>
+				<Button
+					Width="695"
+					Height="48"
+					Margin="0,40,0,0"
+					Content="{x:Static p:Resources.PersonalDataAgreementScreen_Accept}"
+					Style="{StaticResource GlobalAppColorButton}"
+					Command="{Binding NavigateToHomeScreenCommand}" />
+			</StackPanel>
+		</ScrollViewer>
+	</DockPanel>
+</UserControl>

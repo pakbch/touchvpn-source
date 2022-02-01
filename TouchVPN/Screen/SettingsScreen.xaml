@@ -1,0 +1,34 @@
+<UserControl
+	x:Class="TouchVPN.Screen.SettingsScreen" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties" xmlns:screen="clr-namespace:TouchVPN.Screen">
+	<StackPanel
+		Margin="40,72,0,0"
+		Orientation="Vertical">
+		<TextBlock
+			Style="{StaticResource SemiBoldBlackModeText18Px}"
+			Text="{x:Static p:Resources.SettingsScreen_Title}" />
+		<StackPanel
+			Margin="0,27,0,0"
+			Orientation="Horizontal">
+			<TextBlock
+				Style="{StaticResource SemiBoldBlackModeText14Px}"
+				Text="{x:Static p:Resources.SettingsScreen_RunOnWindowsLaunch}" />
+			<CheckBox
+				Margin="280,0,0,0"
+				Style="{StaticResource SwitchBox}"
+				IsChecked="{Binding RunOnStartup}">
+				<i:Interaction.Triggers>
+					<i:EventTrigger
+						EventName="Checked">
+						<i:InvokeCommandAction
+							Command="{Binding AddToStartupCommand}" />
+					</i:EventTrigger>
+					<i:EventTrigger
+						EventName="Unchecked">
+						<i:InvokeCommandAction
+							Command="{Binding RemoveToStartupCommand}" />
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</CheckBox>
+		</StackPanel>
+	</StackPanel>
+</UserControl>

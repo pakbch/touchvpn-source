@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:screen="clr-namespace:TouchVPN">
+	<DrawingImage
+		x:Key="Checked">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,22 L22,22 L22,0 L0,0">
+				<GeometryDrawing
+					Brush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}">
+					<GeometryDrawing.Geometry>
+						<EllipseGeometry
+							Center="11,11"
+							RadiusX="11"
+							RadiusY="11" />
+					</GeometryDrawing.Geometry>
+				</GeometryDrawing>
+				<GeometryDrawing
+					Brush="#FFFFFFFF"
+					Geometry="M22,22 M0,0 M16.7171,7.89167 L9.98734,15.675 C9.61264,16.1083 9.01311,16.1083 8.6384,15.675 L5.28103,11.7583 C4.90632,11.325 4.90632,10.625 5.28103,10.1917 C5.65574,9.75833 6.25527,9.75833 6.62997,10.1917 L9.32786,13.325 L15.3831,6.325 C15.7578,5.89167 16.3573,5.89167 16.7321,6.325 C17.0918,6.75833 17.0918,7.45833 16.7171,7.89167" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

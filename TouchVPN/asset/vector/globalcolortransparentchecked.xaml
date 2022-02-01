@@ -1,0 +1,16 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:screen="clr-namespace:TouchVPN">
+	<DrawingImage
+		x:Key="GlobalColorTransparentChecked">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,20 L20,20 L20,0 L0,0">
+				<GeometryDrawing
+					Geometry="M20,20 M0,0 M19.1668,10 C19.1668,15.0626 15.0628,19.1667 10.0002,19.1667 C4.93755,19.1667 0.833496,15.0626 0.833496,10 C0.833496,4.9374 4.93755,0.833344 10.0002,0.833344 C15.0628,0.833344 19.1668,4.9374 19.1668,10 M18.3335,10 C18.3335,14.6024 14.6025,18.3333 10.0002,18.3333 C5.39779,18.3333 1.66683,14.6024 1.66683,10 C1.66683,5.39764 5.39779,1.66668 10.0002,1.66668 C14.6025,1.66668 18.3335,5.39764 18.3335,10"
+					Brush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+				<GeometryDrawing
+					Geometry="M20,20 M0,0 M5.71133,10.122 L5.12207,10.7113 L8.33336,13.9226 L15.2947,6.9613 L14.7054,6.37204 L8.33336,12.7441 L5.71133,10.122"
+					Brush="{Binding DataContext.GlobalAppColor, RelativeSource={RelativeSource AncestorType={x:Type screen:TouchVpnShell}}}" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

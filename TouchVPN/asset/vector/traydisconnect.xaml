@@ -1,0 +1,26 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="TrayDisconnect">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,12 L12,12 L12,0 L0,0">
+				<GeometryDrawing>
+					<GeometryDrawing.Pen>
+						<Pen
+							Brush="#FF3C3C3C"
+							EndLineCap="Flat"
+							LineJoin="Miter"
+							StartLineCap="Flat"
+							Thickness="2" />
+					</GeometryDrawing.Pen>
+					<GeometryDrawing.Geometry>
+						<RectangleGeometry
+							RadiusX="1"
+							RadiusY="1"
+							Rect="1,1,10,10" />
+					</GeometryDrawing.Geometry>
+				</GeometryDrawing>
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

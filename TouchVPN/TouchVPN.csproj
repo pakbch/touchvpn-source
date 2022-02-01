@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2A651D5-C0CD-41A3-98CB-AA0D54F9B78C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TouchVPN</RootNamespace>
+    <AssemblyName>TouchVPN</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>TouchVPN.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Backend.UserApi">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Backend.UserApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Hydra.Sdk.Windows">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Hydra.Sdk.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Core">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Analytics">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Application">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Auth">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Configuration">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Extensions">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Infrastructure">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.LoggerConfiguration.Sdk">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.LoggerConfiguration.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Navigation">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Parser.Sdk">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Parser.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Storage.Sdk">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Storage.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.UI.ConnectButton">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.UI.ConnectButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.UI.Processing">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.UI.Processing.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.UI.Tray">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.UI.Tray.dll</HintPath>
+    </Reference>
+    <Reference Include="Mystique.Update.Client">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Mystique.Update.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Prism">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Prism.Unity.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="Unity.Abstractions">
+      <HintPath>C:\Program Files (x86)\TouchVPN\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="Mystique.UI.Converters.Sdk" />
+    <Reference Include="Mystique.UI.Converters" />
+    <Reference Include="System.Windows.Interactivity" />
+    <Reference Include="Mystique.UI.Watermark" />
+    <Reference Include="Mystique.UI.TitleBar" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationAssistant.cs" />
+    <Compile Include="Constant\AnimationFileNames.cs" />
+    <Compile Include="Constant\ColorNames.cs" />
+    <Compile Include="Constant\RegionNames.cs" />
+    <Compile Include="Control\ErrorDialog.xaml.cs">
+      <DependentUpon>ErrorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\HyperLink.xaml.cs">
+      <DependentUpon>HyperLink.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MenuButton.xaml.cs">
+      <DependentUpon>MenuButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\TrafficExceeded.xaml.cs">
+      <DependentUpon>TrafficExceeded.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\VirtualLocation.xaml.cs">
+      <DependentUpon>VirtualLocation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\VirtualLocationButton.xaml.cs">
+      <DependentUpon>VirtualLocationButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Event\SubscriptionWatchdog.cs" />
+    <Compile Include="Exception\NotAuthorizedException.cs" />
+    <Compile Include="Exception\ResponseException.cs" />
+    <Compile Include="Extension\BaseResponseExtensions.cs" />
+    <Compile Include="Mystique\Shared\Check.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="PurchaseWindow\CheckoutDialog.xaml.cs">
+      <DependentUpon>CheckoutDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\AboutScreen.xaml.cs">
+      <DependentUpon>AboutScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\AccountScreen.xaml.cs">
+      <DependentUpon>AccountScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\DebugScreen.xaml.cs">
+      <DependentUpon>DebugScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\HomeScreen.xaml.cs">
+      <DependentUpon>HomeScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\LoadingScreen.xaml.cs">
+      <DependentUpon>LoadingScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\MainScreen.xaml.cs">
+      <DependentUpon>MainScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\PasswordResetScreen.xaml.cs">
+      <DependentUpon>PasswordResetScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\PersonalDataAgreementScreen.xaml.cs">
+      <DependentUpon>PersonalDataAgreementScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\SettingsScreen.xaml.cs">
+      <DependentUpon>SettingsScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\SignInScreen.xaml.cs">
+      <DependentUpon>SignInScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\SubscriptionScreen.xaml.cs">
+      <DependentUpon>SubscriptionScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\SupportScreen.xaml.cs">
+      <DependentUpon>SupportScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BackendDataService.cs" />
+    <Compile Include="Service\IBackendDataService.cs" />
+    <Compile Include="TouchVpnShell.xaml.cs">
+      <DependentUpon>TouchVpnShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\Control\MainMenuViewModel.cs" />
+    <Compile Include="ViewModel\Control\TrafficExceededViewModel.cs" />
+    <Compile Include="ViewModel\Control\VirtualLocationViewModel.cs" />
+    <Compile Include="ViewModel\Screen\AboutScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\AccountScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\DebugScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\HomeScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\LoadingScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\PasswordResetScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\PersonalDataAgreementScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\SettingsScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\SignInScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\SubscriptionScreenViewModel.cs" />
+    <Compile Include="ViewModel\Screen\SupportScreenViewModel.cs" />
+    <Compile Include="ViewModel\ShellViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\Connected.json" />
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\Disconnected.json" />
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\Error.json" />
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\Loader.json" />
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\ToConnect.json" />
+    <EmbeddedResource Include="Asset\ConnectButtonAnimation\ToDisconnect.json" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="asset\vector\about.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\account.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\applelogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\arrowdown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\arrowup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\authlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\authselectionlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\blocked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\checked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\checkmark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\close.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\defaultavatar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\facebooklogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\globalcolortransparentchecked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\googlelogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\loadinglogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\locked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\logo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\maillogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\microsoftlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\pin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\subscription.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\support.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\textlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\title.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\trafficexceededlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\transparentchecked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\trayconnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\traydisabled.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\traydisconnect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\trayenabled.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\trayquit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\twitterlogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\unchecked.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="asset\vector\verticalline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\ErrorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\HyperLink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\MenuButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\TrafficExceeded.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\VirtualLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\VirtualLocationButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PurchaseWindow\CheckoutDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\AboutScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\AccountScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\DebugScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\HomeScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\LoadingScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\MainScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\PasswordResetScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\PersonalDataAgreementScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\SettingsScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\SignInScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\SubscriptionScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Screen\SupportScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\colors.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\fonts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="style\styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TouchVpnShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="asset\font\gothampro.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

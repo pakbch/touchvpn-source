@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="FacebookLogo">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,44 L44,44 L44,0 L0,0">
+				<GeometryDrawing
+					Brush="#FF1877F2">
+					<GeometryDrawing.Geometry>
+						<RectangleGeometry
+							RadiusX="6"
+							RadiusY="6"
+							Rect="0,0,44,44" />
+					</GeometryDrawing.Geometry>
+				</GeometryDrawing>
+				<GeometryDrawing
+					Brush="#FFFFFFFF"
+					Geometry="F1 M44,44 M0,0 M27.1482,23.5146 L27.8219,18.8447 L23.6073,18.8447 L23.6073,15.8155 C23.6073,14.5376 24.195,13.2913 26.0826,13.2913 L28,13.2913 L28,9.31553 C28,9.31553 26.2607,9 24.5986,9 C21.126,9 18.8584,11.2371 18.8584,15.2854 L18.8584,18.8447 L15,18.8447 L15,23.5146 L18.8584,23.5146 L18.8584,34.8044 C19.6331,34.9337 20.4256,35 21.2329,35 C22.0402,35 22.8326,34.9337 23.6073,34.8044 L23.6073,23.5146 L27.1482,23.5146" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

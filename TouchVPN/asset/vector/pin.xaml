@@ -1,0 +1,18 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="Pin">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,19 L14,19 L14,0 L0,0">
+				<DrawingGroup.Transform>
+					<TranslateTransform
+						X="0"
+						Y="1.7158015452878317E-07" />
+				</DrawingGroup.Transform>
+				<GeometryDrawing
+					Geometry="F1 M14,19 M0,0 M13.2105,3.66355 C11.4843,0.384307 7.27412,-0.935388 3.82176,0.704233 C0.369392,2.34385 -0.956822,6.4829 0.727259,9.62217 C1.4851,11.0218 4.43224,15.9007 5.99001,18.4601 C6.43208,19.18 7.50568,19.18 7.9267,18.4601 C9.48448,15.9007 12.4106,11.0218 13.2105,9.62217 C14.2841,7.7826 14.242,5.6031 13.2105,3.66355 M6.97941,9.52219 C5.31638,9.52219 3.94806,8.24249 3.94806,6.64286 C3.94806,5.06322 5.29533,3.76353 6.97941,3.76353 C8.66349,3.76353 10.0108,5.06322 10.0108,6.64286 C10.0108,8.22249 8.66349,9.52219 6.97941,9.52219"
+					Brush="{Binding ImageBrush}" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

@@ -1,0 +1,28 @@
+<RadioButton
+	x:Class="TouchVPN.Control.MenuButton" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	Name="MainMenuButton"
+	Style="{StaticResource MainMenuButton}" xmlns:control="clr-namespace:TouchVPN.Control"
+	DataContext="{Binding ElementName=MainMenuButton}"
+	Checked="RadioButtonChecked"
+	MouseEnter="OnMouseEnter"
+	MouseLeave="OnMouseLeave"
+	Unchecked="RadioButtonUnChecked">
+	<FrameworkElement.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/About.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/Account.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/Settings.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/Support.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/Subscription.xaml" />
+				<ResourceDictionary
+					Source="pack://application:,,,/Asset/Vector/Pin.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</FrameworkElement.Resources>
+</RadioButton>

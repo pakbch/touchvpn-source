@@ -1,0 +1,27 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="VerticalLine">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,47 L1,47 L1,0 L0,0">
+				<GeometryDrawing
+					Geometry="F1 M1,47 M0,0 M0.5,1.27059 L0.5,46.4718">
+					<GeometryDrawing.Pen>
+						<Pen
+							EndLineCap="Round"
+							LineJoin="Miter"
+							MiterLimit="1"
+							StartLineCap="Round"
+							Thickness="1">
+							<Pen.Brush>
+								<SolidColorBrush
+									Opacity="0.15"
+									Color="#FF676C73" />
+							</Pen.Brush>
+						</Pen>
+					</GeometryDrawing.Pen>
+				</GeometryDrawing>
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>

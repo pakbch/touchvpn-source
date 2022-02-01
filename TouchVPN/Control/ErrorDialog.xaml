@@ -1,0 +1,67 @@
+<UserControl
+	x:Class="TouchVPN.Control.ErrorDialog" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:TouchVPN.Properties"
+	Width="815"
+	Height="560" xmlns:control="clr-namespace:TouchVPN.Control">
+	<Grid>
+		<StackPanel
+			Background="#FF000000"
+			ZIndex="500"
+			Opacity=".5" />
+		<Grid
+			Width="320"
+			Height="160"
+			Background="#00FFFFFF"
+			ZIndex="1000"
+			Opacity="1">
+			<Border
+				Name="Container"
+				Background="#FFFFFFFF"
+				BorderBrush="#FF808080"
+				BorderThickness="1"
+				CornerRadius="3">
+				<StackPanel
+					Margin="24,19,24,0">
+					<TextBlock
+						Style="{StaticResource BlackModeText20Px}"
+						Text="{Binding Title, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+					<TextBlock
+						Margin="0,12,0,0"
+						Style="{StaticResource BlackModeText14Px}"
+						TextWrapping="Wrap"
+						Text="{Binding Description, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+					<StackPanel
+						Margin="0,29,0,0"
+						Orientation="Horizontal"
+						Visibility="{Binding IsCancelButtonVisible, Converter={StaticResource BooleanToCollapsedConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}">
+						<Button
+							Width="114"
+							Height="20"
+							Content="{x:Static p:Resources.Error_Cancel}"
+							FontSize="14"
+							Style="{StaticResource LinkButton}"
+							Command="{Binding CancelCommand}" />
+						<Button
+							Width="134"
+							Height="32"
+							Margin="14,0,0,0"
+							Style="{StaticResource GlobalAppColorButton}"
+							Command="{Binding ContinueCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+							Content="{Binding OkButtonText, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+					</StackPanel>
+					<StackPanel
+						Margin="0,29,0,0"
+						HorizontalAlignment="Center"
+						Orientation="Horizontal"
+						Visibility="{Binding IsCancelButtonVisible, Converter={StaticResource InvertBooleanToCollapsedConverter}, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}">
+						<Button
+							Width="134"
+							Height="32"
+							Style="{StaticResource GlobalAppColorButton}"
+							Command="{Binding ContinueCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+							Content="{Binding OkButtonText, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" />
+					</StackPanel>
+				</StackPanel>
+			</Border>
+		</Grid>
+	</Grid>
+</UserControl>

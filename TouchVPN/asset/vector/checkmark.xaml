@@ -1,0 +1,13 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<DrawingImage
+		x:Key="CheckMark">
+		<DrawingImage.Drawing>
+			<DrawingGroup
+				ClipGeometry="M0,0 L0,16 L20,16 L20,0 L0,0">
+				<GeometryDrawing
+					Brush="#FF11A759"
+					Geometry="M20,16 M0,0 M19.0237,3.39197 L8.24772,14.6 C7.64772,15.224 6.68772,15.224 6.08772,14.6 L0.711719,8.95997 C0.111719,8.33597 0.111719,7.32797 0.711719,6.70397 C1.31172,6.07997 2.27172,6.07997 2.87172,6.70397 L7.19172,11.216 L16.8877,1.13597 C17.4877,0.511969 18.4477,0.511969 19.0477,1.13597 C19.6237,1.75997 19.6237,2.76797 19.0237,3.39197" />
+			</DrawingGroup>
+		</DrawingImage.Drawing>
+	</DrawingImage>
+</ResourceDictionary>
